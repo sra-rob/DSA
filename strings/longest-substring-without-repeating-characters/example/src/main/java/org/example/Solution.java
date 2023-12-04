@@ -6,6 +6,9 @@ import java.util.Map;
 public class Solution {
     private Solution(){}
     public static int longestSubstringWithoutRepeatingCharacters(String s) {
+        if(s == null) {
+            throw new IllegalArgumentException("String cannot be null");
+        }
         if(s.length() == 0) return 0;
         Map<Character, Integer> characterCount = new HashMap<>(Map.of(s.charAt(0), 1));
         int maxCount = 1;

@@ -4,6 +4,9 @@ public class Solution {
     private String s;
     private Solution() {}
     public static String reverseString(String s) {
+        if(s == null) {
+            throw new IllegalArgumentException("String cannot be null");
+        }
         char[] charArr = s.toCharArray();
         int left = 0;
         int right = s.length() - 1;
